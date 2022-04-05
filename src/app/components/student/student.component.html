@@ -1,0 +1,40 @@
+
+<hr><hr>
+
+
+<div class="p-3">
+    <div class="alert alert-success">Student List</div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let stu of students" >{{stu}}</li>
+    </ul>
+</div>
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Student List Search :  {{search}} </div>
+    <input type="text" class="form-control" [(ngModel)]="search" placeholder="search here">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let stu of students | search:search">{{stu}}</li>
+    </ul>
+</div>
+
+<hr>
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Student List with ascnding order :  {{search2}} </div>
+    <!-- <input type="text" class="form-control" [(ngModel)]="search2" placeholder="search here"> -->
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let stu of students | asc">{{stu}}</li>
+    </ul>
+</div>
+<hr>
+<div class="p-3">
+    <div class="alert alert-success">Student List with descnding order</div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let stu of students1 | desc">{{stu}}</li>
+    </ul>
+</div>
+
+<hr>
+
+
+
